@@ -105,6 +105,8 @@ public:
 	/* Asks the manager if an instance with this name has been created */
 	bool IsInstanceCreated(String a_sInstanceName);
 
+	
+
 private:
 	/* Constructor */
 	MeshManagerSingleton(void);

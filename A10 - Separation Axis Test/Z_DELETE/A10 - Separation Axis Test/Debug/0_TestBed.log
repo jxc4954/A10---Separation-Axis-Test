@@ -1,0 +1,43 @@
+﻿Build started 4/14/2015 10:27:17 PM.
+     1>Project "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\0_TestBed\0_TestBed.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D DEBUG /D _MBCS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis Test\Debug\\" /Fd"Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis Test\Debug\vc110.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt /D _CRT_SECURE_NO_WARNINGS BoundingBoxManagerSingleton.cpp
+         BoundingBoxManagerSingleton.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis TestD.exe" /INCREMENTAL /NOLOGO glew32.lib SOIL.lib opengl32.lib glu32.lib "sfml-system.lib" "sfml-window.lib" MyEngine_d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis TestD.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis TestD.lib" /MACHINE:X86 "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis Test\Debug\BTO.res"
+         "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis Test\Debug\Application.obj"
+         "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis Test\Debug\ApplicationClass.obj"
+         "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis Test\Debug\ApplicationControls.obj"
+         "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis Test\Debug\BoundingBoxClass.obj"
+         "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis Test\Debug\BoundingBoxManagerSingleton.obj"
+         "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis Test\Debug\Main.obj"
+         0_TestBed.vcxproj -> Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis TestD.exe
+       PostBuildEvent:
+         mkdir “Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\_Binary\”
+         mkdir “Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\_Binary\Shaders\”
+         copy “Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\Z_DELETE\A10 - Separation Axis TestD.exe” “Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\_Binary”
+         xcopy "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\GL\bin" "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\_Binary" /y
+         xcopy "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\ME\bin" "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\_Binary" /y
+         xcopy "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\ME\Shaders" "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\_Binary\Shaders" /y
+         :VCEnd
+         A subdirectory or file Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\_Binary\ already exists.
+         A subdirectory or file Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\_Binary\Shaders\ already exists.
+                 1 file(s) copied.
+         Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\GL\bin\glew32.dll
+         Sharing violation
+         Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\ME\bin\MyEngine.dll
+         Sharing violation
+         Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\ME\Shaders\Basic.fs
+         Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\ME\Shaders\Basic.vs
+         Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\ME\Shaders\Color.fs
+         Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\ME\Shaders\Color.vs
+         Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\ME\Shaders\MEShader.fs
+         Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\ME\Shaders\MEShader.vs
+         Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\ME\Shaders\MEShaderBW.fs
+         Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\include\ME\Shaders\MEShaderInv.fs
+         8 File(s) copied
+     1>Done Building Project "Z:\IGMProfile\Documents\A10---Separation-Axis-Test\A10 - Separation Axis Test\0_TestBed\0_TestBed.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:24.47

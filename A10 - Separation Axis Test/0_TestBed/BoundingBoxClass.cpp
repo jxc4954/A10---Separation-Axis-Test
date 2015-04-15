@@ -91,10 +91,13 @@ void BoundingBoxClass::GenerateOrientedBoundingBox(String a_sInstanceName)
 		m_v3Size.z = glm::distance(vector3(0.0f, 0.0f, m_v3Min.z), vector3(0.0f, 0.0f, m_v3Max.z));
 
 		m_bInitialized = true;
+
+		
 	}
 }
 void BoundingBoxClass::GenerateAxisAlignedBoundingBox(matrix4 a_m4ModeltoWorld)
 {
+	MeshManagerSingleton* pMeshMngr = MeshManagerSingleton::GetInstance();
 	//Check if the Axis Aligned Bounding Box has already been created, if not return
 	if(m_v3Max == m_v3Min)
 		return;
@@ -136,6 +139,8 @@ void BoundingBoxClass::GenerateAxisAlignedBoundingBox(matrix4 a_m4ModeltoWorld)
 	m_v3SizeAABB.x = glm::distance(vector3(m_v3MinG.x, 0.0f, 0.0f), vector3(m_v3MaxG.x, 0.0f, 0.0f));
 	m_v3SizeAABB.y = glm::distance(vector3(0.0f, m_v3MinG.y, 0.0f), vector3(0.0f, m_v3MaxG.y, 0.0f));
 	m_v3SizeAABB.z = glm::distance(vector3(0.0f, 0.0f, m_v3MinG.z), vector3(0.0f, 0.0f, m_v3MaxG.z));
+
+	//pMeshMngr->AddPlaneToQueue(glm::translate(m_v3Centroid) * glm::rotate(matrix4(IDENTITY), 90.0f, m_v3Centroid), MERED);
 }
 void BoundingBoxClass::AddAABBToRenderList(matrix4 a_m4ModelToWorld, vector3 a_vColor, bool a_bRenderCentroid)
 {
@@ -148,4 +153,5 @@ void BoundingBoxClass::AddAABBToRenderList(matrix4 a_m4ModelToWorld, vector3 a_v
 		vector3( 1.0f - a_vColor.x, 1.0f - a_vColor.y, 1.0f - a_vColor.z), MERENDER::WIRE);
 	vector3 v3CentroidGlobal = static_cast<vector3>(a_m4ModelToWorld * vector4(m_v3Centroid,1));
 	pMeshMngr->AddCubeToQueue(glm::translate(v3CentroidGlobal) * glm::scale(m_v3SizeAABB), a_vColor, MERENDER::WIRE);
+	//pMeshMngr->AddPlaneToQueue(glm::translate(v3CentroidGlobal), MERED);
 }

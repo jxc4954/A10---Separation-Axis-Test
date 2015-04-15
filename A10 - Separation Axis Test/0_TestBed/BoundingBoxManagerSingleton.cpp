@@ -161,4 +161,32 @@ void BoundingBoxManagerSingleton::CalculateCollision(void)
 				m_lColor[i] = m_lColor[j] = MERED; //We make the Boxes red
 		}
 	}
+
+	for(int i = 0; i < m_nBoxs - 1; i++)
+	{
+		for(int j = i + 1; j < m_nBoxs; j++)
+		{
+			//If the distance between the center of both Boxs is less than the sum of their radius there is a collision
+			//For this check we will assume they will be colliding unless they are not in the same space in X, Y or Z
+			//so we place them in global positions
+			vector3 v1Min = m_lBox[i]->GetMinimumOBB();
+			vector3 v1Max = m_lBox[i]->GetMaximumOBB();
+
+			vector3 v2Min = m_lBox[j]->GetMinimumOBB();
+			vector3 v2Max = m_lBox[j]->GetMaximumOBB();
+
+			bool bColliding = true;
+			if(v1Max.x < v2Min.x || v1Min.x > v2Max.x)
+				bColliding = false;
+			else if(v1Max.y < v2Min.y || v1Min.y > v2Max.y)
+				bColliding = false;
+			else if(v1Max.z < v2Min.z || v1Min.z > v2Max.z)
+				bColliding = false;
+
+			if(bColliding)
+				m_lColor[i] = m_lColor[j] = MECYAN; //We make the Boxes red
+		}
+	}
+
+
 }

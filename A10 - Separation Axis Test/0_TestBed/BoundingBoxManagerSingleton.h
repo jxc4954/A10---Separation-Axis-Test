@@ -31,6 +31,9 @@ public:
 	*/
 	void GenerateBoundingBox(matrix4 a_mModelToWorld, String a_sInstanceName);
 
+	//Generate plane between bounding boxes
+	void GeneratePlane(matrix4 Box1, matrix4 Box2, String a_sInstanceName);
+
 	/*
 	SetBoundingBoxSpace
 		Sets the Matrix that represents the global position of the Box specified by instance name
