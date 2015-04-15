@@ -58,6 +58,8 @@ public:
 	*/
 	void CalculateCollision(void);
 
+
+
 private:
 	/* Constructor */
 	BoundingBoxManagerSingleton(void);

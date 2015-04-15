@@ -153,5 +153,5 @@ void BoundingBoxClass::AddAABBToRenderList(matrix4 a_m4ModelToWorld, vector3 a_v
 		vector3( 1.0f - a_vColor.x, 1.0f - a_vColor.y, 1.0f - a_vColor.z), MERENDER::WIRE);
 	vector3 v3CentroidGlobal = static_cast<vector3>(a_m4ModelToWorld * vector4(m_v3Centroid,1));
 	pMeshMngr->AddCubeToQueue(glm::translate(v3CentroidGlobal) * glm::scale(m_v3SizeAABB), a_vColor, MERENDER::WIRE);
-	//pMeshMngr->AddPlaneToQueue(glm::translate(v3CentroidGlobal), MERED);
+	pMeshMngr->AddPlaneToQueue(glm::translate(v3CentroidGlobal), MERED);
 }
