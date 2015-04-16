@@ -7,6 +7,7 @@ Date: 2015/03
 
 #include "BoundingBoxClass.h"
 
+
 //System Class
 class BoundingBoxManagerSingleton
 {
@@ -32,7 +33,7 @@ public:
 	void GenerateBoundingBox(matrix4 a_mModelToWorld, String a_sInstanceName);
 
 	//Generate plane between bounding boxes
-	void GeneratePlane(matrix4 Box1, matrix4 Box2, String a_sInstanceName);
+	void GeneratePlane(matrix4 a, matrix4 b, String a_sInstanceName);
 
 	/*
 	SetBoundingBoxSpace
@@ -58,6 +59,7 @@ public:
 	*/
 	void CalculateCollision(void);
 
+	int TestOBBOBB(int a, int b);
 
 
 private:

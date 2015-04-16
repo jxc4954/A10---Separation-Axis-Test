@@ -30,7 +30,6 @@ void ApplicationClass::Update (void)
 	m_pBBMngr->GenerateBoundingBox(m_pMeshMngr->GetModelMatrix("Pig"), "Pig");
 
 	m_pBBMngr->CalculateCollision();
-
 	m_pBBMngr->AddBoxToRenderList("ALL");
 	m_pMeshMngr->AddInstanceToRenderList("ALL");
 	
